@@ -42,26 +42,38 @@ class HomeScreen extends StatelessWidget {
           Container(
             height: 400,
             width: 300,
+            clipBehavior: Clip.hardEdge,
             decoration: BoxDecoration(
               color: Colors.lightGreen,
               borderRadius: BorderRadius.circular(25),
             ),
-            child: const Column(
-              children: [
-                Text('Name:Sadiq Awan',
+            child: Column(
+              children:  [
+                const Text('Name:Sadiq Awan',
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                Text('Father Name:M Waseem Awan',
+                const  Text('Father Name:M Waseem Awan',
                     style:
                         TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                const SizedBox(
+                const  SizedBox(
                   height: 20,
                 ),
-                Text(
+                const   Text(
                   'I am a student of BS-IT and i start flutter application in NIC peshawer.',
                   maxLines: 3,
                   textAlign: TextAlign.center,
-                )
+                ),
+                const   SizedBox(
+                  height: 20,
+                ),
+                const    TextField(
+
+                  decoration: InputDecoration(
+                    hintText: 'Any suggestion for me ',
+                      border: OutlineInputBorder( borderRadius: BorderRadius.all( Radius.circular(20)))
+                  ),
+                ),
+                ElevatedButton(onPressed: (){}, child: const Text('Sand'))
               ],
             ),
           )
