@@ -2,7 +2,7 @@
 
 A new Flutter project.
 QNO: Create a protfolio App.
-<![WhatsApp Image 2024-01-24 at 10 48 55 PM](https://github.com/sadiqawan/NIC_first_asignment/assets/125399546/1978a99f-65da-45fe-96f5-35c4d35152ad) width="500" height="600" > 
+![WhatsApp Image 2024-01-24 at 10 48 55 PM width="500" height="600"](https://github.com/sadiqawan/NIC_first_asignment/assets/125399546/1978a99f-65da-45fe-96f5-35c4d35152ad)   
 
 ## Getting Started
 
