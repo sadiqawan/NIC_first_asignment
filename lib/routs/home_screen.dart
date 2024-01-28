@@ -7,74 +7,64 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            SizedBox(
-              width: 10,
-            ),
-            Text(
-              'Portfolio',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-            ),
-            Icon(Icons.search),
-          ],
-        ),
+        title: const Center(
+            child: Text(
+          'Baber Azam',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+        )),
         backgroundColor: Colors.transparent,
       ),
-      drawer: const Drawer(),
-      backgroundColor: Colors.amberAccent,
+      backgroundColor: Colors.green,
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          const SizedBox(
-            height: 20,
-          ),
           const Center(
             child: CircleAvatar(
-              backgroundImage: NetworkImage('url'),
               maxRadius: 70,
+              backgroundImage: AssetImage('images/baber.PNG'),
             ),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          Container(
-            height: 400,
-            width: 300,
-            clipBehavior: Clip.hardEdge,
-            decoration: BoxDecoration(
-              color: Colors.lightGreen,
-              borderRadius: BorderRadius.circular(25),
-            ),
-            child: Column(
-              children:  [
-                const Text('Name:Sadiq Awan',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                const  Text('Father Name:M Waseem Awan',
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                const  SizedBox(
-                  height: 20,
-                ),
-                const   Text(
-                  'I am a student of BS-IT and i start flutter application in NIC peshawer.',
-                  maxLines: 3,
-                  textAlign: TextAlign.center,
-                ),
-                const   SizedBox(
-                  height: 20,
-                ),
-                const    TextField(
-
-                  decoration: InputDecoration(
-                    hintText: 'Any suggestion for me ',
-                      border: OutlineInputBorder( borderRadius: BorderRadius.all( Radius.circular(20)))
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Container(
+              height: 500,
+              decoration: const BoxDecoration(color: Colors.grey),
+              child: ListView(
+                children:  [
+                  const    SizedBox(
+                    height: 80,
+                    child: Card(
+                      child: Center(
+                          child: Text('Baber King',
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 30))),
+                    ),
                   ),
-                ),
-                ElevatedButton(onPressed: (){}, child: const Text('Sand'))
-              ],
+                  const  SizedBox(
+
+                    child: Card(
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: Text(
+
+
+                            ''' Mohammad Babar Azam, \n is a Pakistani international cricketer and the former captain of the Pakistan national cricket team in all formats. He is widely regarded as one of the finest batters in contemporary world cricket. Wikipedia
+                                Born: October 15, 1994 (age 29 years), Walled City of Lahore, Lahore
+                                Dates joined: 2023 (Peshawar Zalmi, Peshawar Zalmi), MORE
+                                 Height: 1.8 m
+                                  Parents: Azam Siddique
+                                  Siblings: Safeer Azam, Faisal Azam
+                                  Batting: Right-handed
+                                  Bowling: Right-arm off break ''',
+                          style: TextStyle( fontSize: 15),  ),
+                      ),
+                    ),
+                  ),
+                  IconButton(
+                      color: Colors.white,
+                      iconSize: 60,
+                      onPressed:(){}, icon: const Icon(Icons.thumb_up_alt_outlined))
+                ],
+              ),
             ),
           )
         ],
